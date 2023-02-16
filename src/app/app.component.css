@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer components{
+
+  .app-container{
+    @apply px-44;
+  }
+
+}
+
+.pages-container{
+
+  min-height: 80vh;
+
+}

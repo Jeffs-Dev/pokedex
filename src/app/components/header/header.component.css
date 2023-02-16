@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer componnets {
+
+  nav>img{
+    @apply w-40 py-2;
+  }
+
+  .container{
+    @apply flex justify-between items-center;
+  }
+
+  .links{
+    @apply flex gap-3 text-lg;
+  }
+
+  .test{
+    @apply hover:underline;
+  }
+
+}
