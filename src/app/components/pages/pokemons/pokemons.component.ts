@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonsComponent implements OnInit {
   pokemons: any = {};
-  pokemonsNames: any = [];
 
   constructor(private pokemonService: PokemonsService) {
     this.getPokemons();
@@ -17,17 +16,9 @@ export class PokemonsComponent implements OnInit {
   ngOnInit(): void {}
 
   getPokemons(): void {
-    try {
-      this.pokemonService.getAll().subscribe((pokemon) => {
-        /* console.log(pokemon) */
-        this.pokemons = pokemon;
-
-        this.pokemons.results.map((item: any) => {
-          this.pokemonsNames.push(item.name);
-        });
-      });
-    } catch (err) {
-      console.log(err);
-    }
+    this.pokemonService.getAll().subscribe((pokemon) => {
+      this.pokemons = pokemon;
+      console.log(this.pokemons);
+    });
   }
 }
