@@ -1,11 +1,8 @@
 <div class="grid grid-cols-5 gap-4">
-  <div class="bg-slate-200">
-    <a href="">
-      <p> Bubassaur </p>
-      <div>
-        <span>Grass</span>
-        <span>Poison</span>
-      </div>
-    </a>
+  <div class="bg-slate-200 text-center p-2" *ngFor="let pokemon of pokemons" >
+
+    <span class="capitalize">  {{pokemon.species.name}}</span>
+
+    <img [src]="pokemon.sprites.front_default" alt="Pokemon">
   </div>
 </div>
