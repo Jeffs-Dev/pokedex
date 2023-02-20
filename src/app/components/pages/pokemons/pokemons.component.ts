@@ -16,11 +16,12 @@ export class PokemonsComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  getPokemons(): void {
-    this.pokemonService.getMainData().subscribe((pokemon) => {
+   async getPokemons(){
+    await this.pokemonService.getMainData().subscribe((pokemon) => {
       pokemon.results.forEach((result: any) => {
         this.pokemonService.getMoreData(result.name).subscribe((data: any) => {
           this.pokemons.push(data);
+
         });
       });
 
