@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokemons.component.css'],
 })
 export class PokemonsComponent implements OnInit {
+  pokemons: any[] = [];
 
-  pokemons: any[] = []
-  pokemonsType: any[] = []
 
   constructor(private pokemonService: PokemonsService) {
     this.getPokemons();
@@ -19,24 +18,13 @@ export class PokemonsComponent implements OnInit {
 
   getPokemons(): void {
     this.pokemonService.getMainData().subscribe((pokemon) => {
-        pokemon.results.forEach((result:any) => {
-          this.pokemonService.getMoreData(result.name).subscribe((data:any) =>{
-            this.pokemons.push(data)
-          })
-        })
+      pokemon.results.forEach((result: any) => {
+        this.pokemonService.getMoreData(result.name).subscribe((data: any) => {
+          this.pokemons.push(data);
+        });
+      });
 
-         console.log(this.pokemons)
-
-
+      console.log(this.pokemons);
     });
   }
-
-
-
-
-
-
-
-
-
 }

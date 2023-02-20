@@ -17,4 +17,11 @@ export class PokemonsService {
   getMoreData(name: string): Observable<any> {
     return this.http.get<any>(`https://pokeapi.co/api/v2/pokemon/${name}`);
   }
+
+  getPokemon(name: string): Observable<any>{
+
+    return this.http.get<any>(`https://pokeapi.co/api/v2/pokemon/${name}`);
+
+
+  }
 }
