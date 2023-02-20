@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class PokemonsComponent implements OnInit {
 
   pokemons: any[] = []
+  pokemonsType: any[] = []
 
   constructor(private pokemonService: PokemonsService) {
     this.getPokemons();
@@ -24,7 +25,9 @@ export class PokemonsComponent implements OnInit {
           })
         })
 
-        console.log(this.pokemons)
+         console.log(this.pokemons)
+
+
     });
   }
 

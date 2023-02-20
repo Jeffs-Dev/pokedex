@@ -1,3 +1,5 @@
+import { PokeInfoComponent } from './components/pages/pokemons/poke-info/poke-info.component';
+
 import { PokemonsComponent } from './components/pages/pokemons/pokemons.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { NgModule } from '@angular/core';
@@ -8,6 +10,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'pokemons', component: PokemonsComponent},
+  {path: 'pokemons/info', component: PokeInfoComponent},
 
 ];
 

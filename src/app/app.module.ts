@@ -10,6 +10,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { PokemonsComponent } from './components/pages/pokemons/pokemons.component';
+import { PokeInfoComponent } from './components/pages/pokemons/poke-info/poke-info.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { PokemonsComponent } from './components/pages/pokemons/pokemons.componen
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    PokemonsComponent
+    PokemonsComponent,
+    PokeInfoComponent
   ],
   imports: [
     BrowserModule,
