@@ -21,7 +21,7 @@ getPokemon(){
 
   const name = String(this.route.snapshot.paramMap.get("name"))
 
-  this.pokemonsService.getPokemon(name).subscribe((pokemon) =>{
+  this.pokemonsService.getMoreData(name).subscribe((pokemon) =>{
     this.pokemonSelected = pokemon;
 
     console.log(this.pokemonSelected)

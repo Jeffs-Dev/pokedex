@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class PokemonsService {
-  private apiGen1 = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=151';
+  private apiGen1 = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=20';
 
   constructor(private http: HttpClient) {}
 
@@ -18,10 +18,6 @@ export class PokemonsService {
     return this.http.get<any>(`https://pokeapi.co/api/v2/pokemon/${name}`);
   }
 
-  getPokemon(name: string): Observable<any>{
-
-    return this.http.get<any>(`https://pokeapi.co/api/v2/pokemon/${name}`);
 
 
-  }
 }

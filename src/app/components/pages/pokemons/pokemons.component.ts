@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonsComponent implements OnInit {
   pokemons: any[] = [];
+  typeColors: string[] = ['poison', 'fire', 'water']
 
 
   constructor(private pokemonService: PokemonsService) {
@@ -28,4 +29,18 @@ export class PokemonsComponent implements OnInit {
       console.log(this.pokemons);
     });
   }
+
+
+
+ /*  getTypeColor(color: string)
+  {
+    switch (color) {
+      case 'poison':
+        return 'green';
+      case 'water':
+        return 'blue';
+      case 'fire':
+        return 'red';
+    }
+  } */
 }
