@@ -22,7 +22,7 @@ export class PokemonsComponent implements OnInit {
       pokemon.results.forEach((result: any) => {
         this.pokemonService.getMoreData(result.name).subscribe((data: any) => {
           this.pokemons.push(data);
-
+          
         });
       });
 
@@ -34,13 +34,14 @@ export class PokemonsComponent implements OnInit {
 
   getTypeColor(type:string){
     if(type === 'water'){
-      return 'blue'
+      return '#0080ff'
+
     }else if(type === 'fire'){
-      return 'red'
+      return '#d52100'
     }
 
     else if(type === 'poison'){
-      return '#A020F0'
+      return '#88447a'
     }
 
     else if(type === 'grass'){
@@ -85,6 +86,22 @@ export class PokemonsComponent implements OnInit {
 
     else if(type === 'ice'){
       return '#0af'
+    }
+
+    else if(type === 'dark'){
+      return '#573e31'
+    }
+
+    else if(type === 'steel'){
+      return '#8e8ea4'
+    }
+
+    else if(type === 'ghost'){
+      return '#5454b3'
+    }
+
+    else if(type === 'fighting'){
+      return '#a84d3d'
     }
     else{
       return 'LUL'

@@ -18,6 +18,4 @@ export class PokemonsService {
     return this.http.get<any>(`https://pokeapi.co/api/v2/pokemon/${name}`);
   }
 
-
-
 }
