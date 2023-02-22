@@ -37,9 +37,9 @@
         <div class="flex gap-2 justify-center">
           <div *ngFor="let type of pokemon.types">
 
-            <span class="capitalize text-sm">{{type.type.name}}</span>
+           <!--  <span class="capitalize text-sm">{{type.type.name}}</span> -->
 
-           <!-- <span class="capitalize text-sm" [ngStyle]="{'color': getTypeColor(type.type.name)}">{{type.type.name}}</span> -->
+           <span class="capitalize text-sm" [ngStyle]="{'color': getTypeColor(type.type.name)}">{{type.type.name}}</span>
 
 
           </div>
