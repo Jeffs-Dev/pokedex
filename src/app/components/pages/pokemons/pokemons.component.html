@@ -1,5 +1,5 @@
-<div class="grid grid-cols-5 gap-4 mt-20">
-  <div class="text-center p-2 flex flex-col justify-center items-center" *ngFor="let pokemon of pokemons">
+<div class="main-container">
+  <div class="cards" *ngFor="let pokemon of pokemons">
 
     <a routerLink="/pokemons/{{pokemon.name}}">
 
@@ -21,26 +21,19 @@
         </ng-template>
 
         <ng-template #threeCases>
-
           <div *ngIf="pokemon.id.toString().length === 3;">
             <span> {{'0' + pokemon.id}}</span>
           </div>
-
         </ng-template>
 
-
-
-
-        <span class="capitalize text-sky-600 font-bold hover:underline hover:text-red-800">
+        <span class="titles">
           {{pokemon.species.name}}</span>
 
         <div class="flex gap-2 justify-center">
           <div *ngFor="let type of pokemon.types">
 
-           <!--  <span class="capitalize text-sm">{{type.type.name}}</span> -->
-
-           <span class="capitalize text-sm" [ngStyle]="{'color': getTypeColor(type.type.name)}">{{type.type.name}}</span>
-
+            <span class="capitalize text-sm"
+              [ngStyle]="{'color': getTypeColor(type.type.name)}">{{type.type.name}}</span>
 
           </div>
         </div>

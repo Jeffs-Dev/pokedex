@@ -6,7 +6,7 @@
 
 @layer componnets {
 
-  nav>img{
+  nav>a>img{
     @apply w-40 py-2;
   }
 
